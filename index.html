@@ -19,6 +19,42 @@
             margin: auto;
             overflow: hidden;
         }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 30px 0;
+            border-bottom: #444 3px solid;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: padding 0.3s, font-size 0.3s;
+        }
+        header h1 {
+            float: left;
+            margin: 0;
+            font-size: 24px;
+        }
+        nav {
+            float: right;
+            margin-top: 10px;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            color: #ddd;
+        }
         .section {
             padding: 30px;
             background: #003366;
@@ -54,9 +90,40 @@
             margin: 0;
             font-size: 16px;
         }
+        .footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <header id="header" class="container">
+        <h1>tigerhak</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#wish">wish</a></li>
+                <li><a href="#explore">explore</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="container section">
+        <h2>about</h2>
+        <p>maniac web</p>
+    </section>
+
     <section id="wish" class="container section">
         <h2>wish</h2>
         <div class="wish-banner">
@@ -77,5 +144,42 @@
             </div>
         </div>
     </section>
+
+    <section id="explore" class="container section">
+        <h2>explore</h2>
+        <p>
+            <a href="https://open.spotify.com/user/31svk64retzik7fqa4cttkmcnldq" target="_blank">집 짓기</a>
+        </p>
+        <p>
+            <a href="https://www.linkedin.com/in/tigerhak/" target="_blank">어디로 나아갈지 예상할 수 없다 1</a>
+        </p>
+        <p>
+            <a href="https://tigerhak.substack.com/?utm_source=substack&utm_medium=web&utm_campaign=substack_profile" target="_blank">어디로 나아갈지 예상할 수 없다 2</a>
+        </p>
+        <p>
+            <a href="https://www.youtube.com/@hak331" target="_blank">자극적이지 않아보이는 영상</a>
+        </p>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 호랑이띠 영학. All Rights Reserved. |
+            <a href="mailto:jyhak0331@gmail.com">jyhak0331@gmail.com</a>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.style.padding = '10px 0';
+                    header.querySelector('h1').style.fontSize = '20px';
+                } else {
+                    header.style.padding = '30px 0';
+                    header.querySelector('h1').style.fontSize = '24px';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
