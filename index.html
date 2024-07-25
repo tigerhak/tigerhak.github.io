@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yeonghak Jeong</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f7f9fc;
+            color: #333;
         }
         .container {
             width: 80%;
@@ -18,19 +20,18 @@
             overflow: hidden;
         }
         header {
-            background: #333;
+            background: #4a90e2;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #0779e4 3px solid;
-        }
-        header a, header ul {
-            color: #fff;
-            text-decoration: none;
+            padding: 30px 0;
+            border-bottom: #007bb5 3px solid;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         header h1 {
             float: left;
             margin: 0;
+            font-size: 24px;
         }
         nav {
             float: right;
@@ -43,25 +44,50 @@
         }
         nav ul li {
             display: inline;
-            margin-left: 5px;
+            margin-left: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            color: #d1e9ff;
         }
         .section {
             padding: 30px;
             background: #fff;
             margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #007bb5;
+        }
+        .project {
+            margin-bottom: 15px;
         }
         .footer {
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             margin-top: 20px;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header class="container">
-        <h1>tigerhak</h1>
+        <h1>Yeonghak Jeong</h1>
         <nav>
             <ul>
                 <li><a href="#about">Abstract</a></li>
@@ -73,28 +99,28 @@
 
     <section id="about" class="container section">
         <h2>Abstract</h2>
-        <p>Welcome to my world</p>
+        <p>Welcome to my world. Here you can find information about my projects and how to contact me.</p>
     </section>
 
     <section id="projects" class="container section">
         <h2>Project</h2>
         <div class="project">
-            <h3>P1</h3>
-            <p>detail 1.</p>
+            <h3>Project 1</h3>
+            <p>Detail about the first project. You can elaborate on the technologies used, the objectives, and the outcomes.</p>
         </div>
         <div class="project">
-            <h3>P2</h3>
-            <p>detail 2.</p>
+            <h3>Project 2</h3>
+            <p>Detail about the second project. Mention the challenges faced, the solutions implemented, and the results achieved.</p>
         </div>
     </section>
 
     <section id="contact" class="container section">
         <h2>Contact</h2>
-        <p>e-mail: jyhak0331@gmail.com</p>
+        <p>Email: <a href="mailto:jyhak0331@gmail.com">jyhak0331@gmail.com</a></p>
     </section>
 
     <footer class="footer">
-        <p>© 2024 tigerhak. All Rights Reserved.</p>
+        <p>© 2024 Yeonghak Jeong. All Rights Reserved. | <a href="#about">About</a></p>
     </footer>
 </body>
 </html>
