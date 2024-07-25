@@ -22,16 +22,17 @@
         header {
             background: #000;
             color: #fff;
-            padding: 30px 0;
+            padding: 30px 0; /* 기본 패딩 */
             border-bottom: #444 3px solid;
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: padding 0.3s, font-size 0.3s; /* 부드러운 애니메이션 효과 추가 */
         }
         header h1 {
             float: left;
             margin: 0;
-            font-size: 24px;
+            font-size: 24px; /* 기본 글꼴 크기 */
         }
         nav {
             float: right;
@@ -98,7 +99,7 @@
     </style>
 </head>
 <body>
-    <header class="container">
+    <header id="header" class="container">
         <h1>호랑이띠 영학</h1>
         <nav>
             <ul>
@@ -147,5 +148,22 @@
             <a href="mailto:jyhak0331@gmail.com">jyhak0331@gmail.com</a>
         </p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.getElementById('header');
+            const initialHeaderHeight = header.offsetHeight;
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) { // 스크롤 위치가 50px을 넘으면
+                    header.style.padding = '10px 0'; // 헤더의 패딩을 줄입니다
+                    header.querySelector('h1').style.fontSize = '20px'; // 헤더의 글꼴 크기를 줄입니다
+                } else {
+                    header.style.padding = '30px 0'; // 기본 패딩으로 복원합니다
+                    header.querySelector('h1').style.fontSize = '24px'; // 기본 글꼴 크기로 복원합니다
+                }
+            });
+        });
+    </script>
 </body>
 </html>
